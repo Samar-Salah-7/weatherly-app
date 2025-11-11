@@ -64,7 +64,7 @@ let myAllData;
 // getForCastDays();
 async function getCountry(country) {
   let res = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=90654e3fa1894e3fab0162052250811&q=${country}&days=3`
+    `https://api.weatherapi.com/v1/forecast.json?key=90654e3fa1894e3fab0162052250811&q=${country}&days=3`
   );
 
   myAllData = await res.json();
