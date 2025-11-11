@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+  main .row .days-temp {
+    order: 1;
+  }
+  footer .copy-right {
+    margin-inline: auto;
+    margin-top: 2px !important;
+  }
+  footer .inner-footer-links {
+    margin-top: 5px;
+  }
+}

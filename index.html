@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weatherly</title>
+    <link
+      rel="shortcut icon"
+      href="images/cloudy-logo.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <div class="logo">
+          <a class="navbar-brand d-flex" href="#">
+            <img
+              src="images/cloudy-logo.png"
+              alt="cloudy-logo"
+              style="width: 40px"
+              class="me-2"
+            />
+            <span class="pt-2">Weatherly</span></a
+          >
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="loading d-none" id="loading">
+      <span class="loader"></span>
+    </div>
+
+    <section class="our-search pt-5">
+      <div class="form position-relative">
+        <input
+          class="form-control form-control-lg w-75 m-auto"
+          type="search"
+          placeholder="find your location"
+          aria-label=".form-control-lg example"
+          id="searchInput"
+        />
+        <button
+          type="button"
+          class="btn btn-primary position-absolute find-btn"
+          id="searchBtn"
+        >
+          Find
+        </button>
+      </div>
+    </section>
+
+    <main class="py-5 w-75 m-auto">
+      <div class="container p-3">
+        <div class="row gy-3 align-items-center">
+          <div class="days-temp col-md-8">
+            <div class="inner-1">
+              <div class="card" id="currentDay"></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="inner">
+              <div class="card">
+                <div class="map">
+                  <iframe
+                    id="mapFrame"
+                    class="w-100 p-1"
+                    style="border: 0; min-height: 230px"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row gy-3">
+          <div class="col-md-8">
+            <div class="inner">
+              <div class="row row-md-cols-2 gy-3 py-3" id="nextDays"></div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="inner">
+              <div class="forcast-sammary card p-3 mt-3">
+                <h3>Forcast</h3>
+                <div
+                  class="d-flex justify-content-around border border-1 rounded-2"
+                  id="forecastSammary"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="p-3">
+      <div class="container-footer w-75 mx-auto">
+        <div class="row g-3 py-3 justify-content-between align-items-baseline">
+          <div class="col-md-8">
+            <div class="inner-footer">
+              <div class="form position-relative">
+                <input
+                  class="form-control form-control-lg rounded-pill m-auto"
+                  type="text"
+                  placeholder="Enter email"
+                  aria-label=".form-control-lg example"
+                  id="subscribeInput"
+                />
+                <button
+                  type="button"
+                  class="btn btn-primary position-absolute subscibe-btn rounded-pill"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div class="inner-footer-links d-flex justify-content-center">
+              <div class="rounded-circle p-2 mx-2">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </div>
+              <div class="rounded-circle p-2 mx-2">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+              <div class="rounded-circle p-2 mx-2">
+                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+              </div>
+              <div class="rounded-circle p-2 mx-2">
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="me-auto w-75 mt-4 text-secondary copy-right">
+          Copyright 2025 personal. Designed by Samar. All rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
