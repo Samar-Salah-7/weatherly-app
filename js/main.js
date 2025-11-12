@@ -19,11 +19,11 @@ let todayNum;
 let myMonth;
 function getDate() {
   let dayObj = new Date();
-  console.log(dayObj);
+  // console.log(dayObj);
   myHour12 = dayObj.toLocaleTimeString([], {
     hour: "2-digit",
   });
-  console.log(myHour12);
+  // console.log(myHour12);
   today = dayObj.toLocaleDateString("en-GB", {
     weekday: "long",
   });
@@ -68,11 +68,11 @@ async function getCountry(country) {
   );
 
   myAllData = await res.json();
-  console.log(myAllData, "My All Data");
+  // console.log(myAllData, "My All Data");
   forecastList = myAllData.forecast.forecastday;
   console.log("ForCaaaaaaaaaaaaaast", forecastList);
-  console.log(myAllData.location.name);
-  console.log(myAllData.location.tz_id);
+  // console.log(myAllData.location.name);
+  // console.log(myAllData.location.tz_id);
   // console.log(Math.ceil(forecastList.forecast.forecastday[0].day.maxtemp_c));
   await displayCurrentDay();
   await displaynextDays();
