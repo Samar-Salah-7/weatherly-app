@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Weatherly</title>
+    <meta name="description" content="This is my Simple weather App" />
     <link
       rel="shortcut icon"
       href="images/cloudy-logo.png"
@@ -80,6 +81,7 @@
           placeholder="find your location"
           aria-label=".form-control-lg example"
           id="searchInput"
+          name="search"
         />
         <button
           type="button"
@@ -104,6 +106,7 @@
               <div class="card">
                 <div class="map">
                   <iframe
+                    title="location-frame"
                     id="mapFrame"
                     class="w-100 p-1"
                     style="border: 0; min-height: 230px"
